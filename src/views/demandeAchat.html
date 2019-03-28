@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Simple Sidebar - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="css/menu.css" rel="stylesheet">
+
+</head>
+
+<body style="background-image: url('../img/fin1.jpg')">
+
+  <div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <div class="bg-dark border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Cgf Bourse</div>
+      <div class="list-group list-group-flush">
+        <a href="menu.html" class="list-group-item list-group-item-action  ">Accueille</a>
+        <a href="demandeConges.html" class="list-group-item list-group-item-action ">Demande congés</a>
+        <a href="demandeAchat.html" class="list-group-item list-group-item-action active">Demande achat</a>
+      
+      </div>
+    </div>
+    
+    <div class="container">
+      <form>
+             
+              <div class="form-row">
+                      <div class="form-group col-md-12">
+                              <div class="form-group">
+                                      <label for="inputAddress" style="color:white">Ecrire la demande</label>
+                                      <!-- <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"> -->
+                                      <textarea name="" id="inputAddress"  class="form-control"  cols="100" rows="5" placeholder="ecrivez votre demande" id="demandeConges"></textarea>
+                                      
+                               </div>
+                      </div>
+              </div>
+             
+              <div class="form-row" id="materiel">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4" style="color:white">Liste des fournitures / matériels / Services:</label>
+                    <input type="text" class="form-control" id="datedebut" placeholder="date debut">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <a href="#" class="btn btn-info btn-lg"  onclick="addNewMateriel()">
+                      <i class="fa fa-plus"></i> Plus 
+                    </a>
+                  </div>
+              </div>
+               
+              <button type="submit" class="btn btn-primary" onclick="saveConges()">Envoyer la demande</button>
+            </form>
+  </div>
+
+  </div>
+ 
+
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Menu Toggle Script -->
+  <script>
+    // $("#menu-toggle").click(function(e) {
+    //   e.preventDefault();
+    //   $("#wrapper").toggleClass("toggled");
+    // });
+   function addNewMateriel(){
+     var newinput = document.createElement("div").setAttribute("class","form-group col-md-6");
+     newinput.innerHTML ='  <input type="text" class="form-control" id="datedebut" placeholder="date debut">';
+     document.getElementById("materiel").appendChild(newinput);
+   }
+
+  </script>
+
+</body>
+
+</html>
